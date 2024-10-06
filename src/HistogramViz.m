@@ -5,8 +5,9 @@ classdef HistogramViz
 
     methods (Static)
         function ShowHistMatlab(image)
-            for i = 1:size(image, 3)
-
+            channels = size(image, 3);
+            for i = 1:channels
+                % Untuk keperluan visualisasi, spesifikasikan channel warna yang sedang diolah
                 if (channels > 1)
                     color = HistogramViz.CHANNEL(i);
                 else
@@ -30,25 +31,28 @@ classdef HistogramViz
 
             channels = size(image, 3);
             for i = 1:channels
-                % Hitung frekuensi kemunculan tiap nilai keabuan pada citra
-                freq = HistogramUtils.CountValueFrequency(image(:, :, i));
-
+                % Untuk keperluan visualisasi, spesifikasikan channel warna yang sedang diolah
                 if (channels > 1)
                     color = HistogramViz.CHANNEL(i);
                 else
                     color = 'Gray';
                 end
 
-                % Gambar histogram
+                % Hitung frekuensi kemunculan tiap nilai keabuan pada citra
+                freq = HistogramUtils.CountValueFrequency(image(:, :, i));
+
+                % Gambar histogram (kemunculan nilai keabuan)
                 figure;
                 set(gcf, 'Name', strcat("Histogram Citra ", name, " (", color, ")"));
                 bar(0:255, freq, "EdgeColor", "none");
 
+                % sumbu x adalah nilai keabuan
                 xlabel(strcat("Nilai keabuan (", color, ")"));
                 xlim([0 255]);
 
+                % sumbu y adalah frekuensi kemunculan
                 ylabel('Frekuensi kemunculan');
-                ylim([0 max(freq)]);
+                ylim([0, max(freq)]);
 
                 title(strcat("Histogram Citra ", name, " (", color, ")"));
             end

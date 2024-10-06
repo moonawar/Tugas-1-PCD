@@ -2,14 +2,14 @@ imgId = input('Masukkan nama file gambar: ', 's');
 basepath = '../images/';
 img = imread(strcat(basepath, imgId));
 
-result = HistogramEq.HistEqMatlab(img);
+% Show Histogram
+% HistogramViz.ShowHistMatlab(img);
+% HistogramViz.ShowHist(img, 'Manual');
+
+% Histogram Equalization
+HistogramViz.ShowHist(img, 'Input');
+result = HistogramEq.HistEq(img);
 figure;
 imshow(result);
-title('Citra Hasil Histogram Equalization dengan HistEq Matlab');
-HistogramViz.ShowHist(result, 'Histeq Matlab');
-
-result2 = HistogramEq.HistEq(img);
-figure;
-imshow(result2);
-title('Citra Hasil Histogram Equalization dengan Manual');
-HistogramViz.ShowHist(result2, 'Histeq Manual');
+title('Citra Hasil Perataan Histogram');
+HistogramViz.ShowHist(result, 'Output');
