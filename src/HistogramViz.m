@@ -45,20 +45,31 @@ classdef HistogramViz
                 % Gambar histogram (kemunculan nilai keabuan)
                 if isempty(ax)
                     figure;
-                    ax = gca;  % axis untuk subplot
+                    set(gcf, 'Name', strcat("Histogram Citra ", name, " (", color, ")"));
+                    bar(0:255, freq, "EdgeColor", "none");
+
+                    % sumbu x adalah nilai keabuan
+                    xlabel(strcat("Nilai keabuan (", color, ")"));
+                    xlim([0 255]);
+
+                    % sumbu y adalah frekuensi kemunculan
+                    ylabel('Frekuensi kemunculan');
+                    ylim([0, max(freq)]);
+
+                    title(strcat("Histogram Citra ", name, " (", color, ")"));
+                else
+                    bar(ax, 0:255, freq, "EdgeColor", "none");
+            
+                    % sumbu x adalah nilai keabuan
+                    xlabel(ax, strcat("Nilai keabuan (", color, ")"));
+                    xlim(ax, [0 255]);
+            
+                    % sumbu y adalah frekuensi kemunculan
+                    ylabel(ax, 'Frekuensi kemunculan');
+                    ylim(ax, [0, max(freq)]);
+            
+                    title(ax, strcat("Histogram Citra ", name, " (", color, ")"));
                 end
-                
-                bar(ax, 0:255, freq, "EdgeColor", "none");
-        
-                % sumbu x adalah nilai keabuan
-                xlabel(ax, strcat("Nilai keabuan (", color, ")"));
-                xlim(ax, [0 255]);
-        
-                % sumbu y adalah frekuensi kemunculan
-                ylabel(ax, 'Frekuensi kemunculan');
-                ylim(ax, [0, max(freq)]);
-        
-                title(ax, strcat("Histogram Citra ", name, " (", color, ")"));
             end
         end
     end
