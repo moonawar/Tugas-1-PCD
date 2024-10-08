@@ -1,0 +1,69 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="356747301" file="D:\Addin Munawwar\2024\10. Oktober\Image Processing\Tugas 1\src\Tugas1-13521069-13521085.prj" location="D:\Addin Munawwar\2024\10. Oktober\Image Processing\Tugas 1\src" name="Tugas1-13521069-13521085" target="target.mlapps" target-name="Package App">
+    <param.appname>Tugas1-13521069-13521085</param.appname>
+    <param.authnamewatermark />
+    <param.email />
+    <param.company />
+    <param.icon />
+    <param.icons />
+    <param.summary />
+    <param.description />
+    <param.screenshot>C:\Users\addin\AppData\Local\Temp\tpe7b06848_42ef_4dbc_a985_ae77f59be3b4.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>D:\Addin Munawwar\2024\10. Oktober\Image Processing\Tugas 1\build</param.output>
+    <param.guid>86beb965-0a9b-4839-8b72-803ea3e6be10</param.guid>
+    <unset>
+      <param.authnamewatermark />
+      <param.email />
+      <param.company />
+      <param.icon />
+      <param.icons />
+      <param.summary />
+      <param.description />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\main.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\HistogramEq.m</file>
+      <file>${PROJECT_ROOT}\HistogramSpec.m</file>
+      <file>${PROJECT_ROOT}\HistogramUtils.m</file>
+      <file>${PROJECT_ROOT}\HistogramViz.m</file>
+      <file>${PROJECT_ROOT}\ImageFix.m</file>
+    </fileset.depfun>
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="D:\Addin Munawwar\2024\10. Oktober\Image Processing\Tugas 1" name="build" optional="false">D:\Addin Munawwar\2024\10. Oktober\Image Processing\Tugas 1\build</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2024b</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
