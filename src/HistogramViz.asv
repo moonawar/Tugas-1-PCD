@@ -50,11 +50,11 @@ classdef HistogramViz
                 
                 bar(ax, 0:255, freq, "EdgeColor", "none");
         
-                % sumbu x adalah nilai keabuan
+                % x-axis is the intensity value
                 xlabel(ax, strcat("Nilai keabuan (", color, ")"));
                 xlim(ax, [0 255]);
         
-                % sumbu y adalah frekuensi kemunculan
+                % y-axis is the frequency of occurrence
                 ylabel(ax, 'Frekuensi kemunculan');
                 ylim(ax, [0, max(freq)]);
         
